@@ -1,0 +1,147 @@
+import java.util.*;
+public class Stack
+{
+int s[]=new int[10]; int top= -1;
+int size=3;
+void push(int i)
+{
+if(top==size-1)
+System.out.println("Stack Overflow");
+else
+{
+}
+s[++top] = i;
+}
+{
+void pop( )
+if (top == -1)
+{
+}
+else
+{
+System.out.println("Stack Underflow");
+System.out.println(" Popped Element= " + s[top]);
+top--;
+}
+}
+{
+void display( )
+if(top == -1)
+{
+}
+else
+{
+System.out.println("Stack is Empty\n");
+System.out.println("Stack Elements are:\n");
+for (int i = top; i >= 0; i--)
+System.out.println(s[i]);
+}
+}
+public static void main(String args[])
+{
+Scanner scan = new Scanner(System.in);
+Stack stk = new Stack();
+for(;;)
+{
+System.out.println("\n---Stack Operations---");
+System.out.println("1. Push");
+System.out.println("2. Pop");
+System.out.println("3. Display");
+System.out.println("4. Exit");
+System.out.println("Enter your choice:\n");
+int choice = scan.nextInt();
+switch (choice)
+{
+case 1 :
+System.out.println("Enter the element
+to push");
+stk.push(scan.nextInt());
+break;
+case 2 : stk.pop();
+break;
+case 3 : stk.display();
+break;
+case 4 : System.exit(0);
+default :
+System.out.println("Invalid Choice\n");
+break;
+}
+}
+}
+}
+
+
+
+OUTPUT:
+‐‐‐‐‐‐‐Stack Operations‐‐‐‐‐‐‐
+1. Push
+2. Pop
+3. Display
+4. Exit
+Enter your choice: 3
+4. Exit
+Enter your choice: 1
+Enter the element to push 60
+Stack is Empty
+‐‐‐‐‐‐‐Stack Operations‐‐‐‐‐‐‐
+1. Push
+2. Pop
+3. Display
+4. Exit
+Enter your choice: 1
+‐‐‐‐‐‐‐Stack Operations‐‐‐‐‐‐‐
+1. Push
+2. Pop
+3. Display
+4. Exit
+Enter your choice: 2
+Enter the element to push 30
+Stack Underflow
+‐‐‐‐‐‐‐Stack Operations‐‐‐‐‐‐‐
+1. Push
+2. Pop
+3. Display
+4. Exit
+Enter your choice: 1
+‐‐‐‐‐‐‐Stack Operations‐‐‐‐‐‐‐
+1. Push
+2. Pop
+3. Display
+4. Exit
+Enter your choice: 1
+Enter the element to push 50
+Stack Overflow
+Enter the element to push ‐‐‐‐‐‐‐Stack Operations‐‐‐‐‐‐‐
+1. Push
+10
+2. Pop
+3. Display
+‐‐‐‐‐‐‐Stack Operations‐‐‐‐‐‐‐
+1. Push
+2. Pop
+3. Display
+4. Exit
+Enter your choice: 3
+Stack Elements are:
+30 60 10
+2. Pop
+3. Display
+4. Exit
+Enter your choice: 3
+‐‐‐‐‐‐‐Stack Operations‐‐‐‐‐‐‐
+1. Push
+2. Pop
+3. Display
+4. Exit
+Enter your choice: 2
+Stack Elements are:
+60 10
+Popped Element= 30
+‐‐‐‐‐‐‐Stack Operations‐‐‐‐‐‐‐
+1. Push
+‐‐‐‐‐‐‐Stack Operations‐‐‐‐‐‐‐
+1. Push
+2. Pop
+3. Display
+4. Exit
+Enter your choice: 4

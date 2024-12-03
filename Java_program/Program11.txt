@@ -1,0 +1,37 @@
+public class Mythread implements Runnable
+{
+public void run()
+{
+for (int i = 1; i<= 5; i++)
+{
+System.out.println(Thread.currentThread().getName()+" i is " + i);
+try
+{
+//sleep current thread for 500 ms
+Thread.sleep(500);
+}
+catch (InterruptedException e)
+{
+//print the exception message if occurred
+System.out.println(e.getMessage());
+}
+}
+}
+}
+{
+class ThreadExample
+public static void main(String[] args)
+{
+Mythread myThread = new Mythread();
+//thread 1
+Thread t1 =new Thread(myThread);
+//thread2
+Thread t2 =new Thread(myThread);
+//thread 3
+Thread t3 =new Thread(myThread);
+//starting all 3 threads now
+t1.start();
+t2.start();
+t3.start();
+}
+}
