@@ -1,0 +1,101 @@
+Experiment 7
+Git Tags and Releases:
+ 
+Write the command to create a lightweight Git tag named "v1.0" for a commit in your local repository.
+ 
+Solution:
+ 
+To create a lightweight Git tag named "v1.0" for a commit in your local repository, you can use the following command:
+ 
+$ git tag v1.0
+ 
+This command will create a lightweight tag called "v1.0" for the most recent commit in your current branch. If you want to tag a specific commit other than the most recent one, you can specify the commit's SHA-1 hash after the tag name. For example:
+ 
+$ git tag v1.0 <commit-SHA>
+ 
+Replace <commit-SHA> with the actual SHA-1 hash of the commit you want to tag.
+
+Experiment 8.
+ 
+Advanced Git Operations:
+ 
+Write the command to cherry-pick a range of commits from "source-branch" to the current branch.
+ 
+Solution:
+ 
+To cherry-pick a range of commits from "source-branch" to the current branch, you can use the following command:
+ 
+$ git cherry-pick <start-commit>^..<end-commit>
+ 
+Replace <start-commit> with the commit at the beginning of the range, and <end-commit> with the commit at the end of the range. The ^ symbol is used to exclude the <start-commit> itself and include all commits after it up to and including <end-commit>. This will apply the changes from the specified range of commits to your current branch.
+ 
+For example, if you want to cherry-pick a range of commits from "source-branch" starting from commit ABC123 and ending at commit DEF456, you would use:
+ 
+$ git cherry-pick ABC123^..DEF456
+ 
+Make sure you are on the branch where you want to apply these changes before running the cherry-pick command.
+
+Experiment 9
+ 
+Analyzing and Changing Git History:
+ 
+Given a commit ID, how would you use Git to view the details of that specific commit, including the author, date, and commit message?
+ 
+Solution:
+ 
+To view the details of a specific commit, including the author, date, and commit message, you can use the git show or git log command with the commit ID. Here are both options:
+1. Using git show: bash
+git show <commit-ID>
+ 
+Replace <commit-ID> with the actual commit ID you want to view. This command will display detailed information about the specified commit, including the commit message, author, date, and the changes introduced by that commit.
+ 
+For example:
+ 
+$ git show abc123
+ 
+2. Using git log:
+ 
+$ git log -n 1 <commit-ID>
+ 
+The -n 1 option tells Git to show only one commit. Replace <commit-ID> with the actual commit ID. This command will display a condensed view of the specified commit, including its commit message, author, date, and commit ID.
+ 
+For example:
+ 
+$ git log -n 1 abc123
+ 
+Both of these commands will provide you with the necessary information about the specific commit you're interested in.
+
+Experiment 10
+ 
+Analyzing and Changing Git History
+ 
+Write the command to list all commits made by the author "JohnDoe" between "2023- 01-01"and "2023-12-31."
+ 
+Solution:
+ 
+To list all commits made by the author "JohnDoe" between "2023-01-01" and "2023-12-31" in Git, you can use the git log command with the --author and --since and --until options. Here's the command:
+ 
+$ git log --author="JohnDoe" --since="2023-01-01" --until="2023-12-31"
+ 
+This command will display a list of commits made by the author "JohnDoe" that fall within the specified date range, from January 1, 2023, to December 31, 2023. Make sure to adjust the author name and date range as needed for your specific use case.
+
+Experiment 11
+ 
+Write the command to display the last five commits in the repository's history. Solution:
+To display the last five commits in a Git repository's history, you can use the git log command with the -n option, which limits the number of displayed commits. Here's the command:
+ 
+$ git log -n 5
+ 
+This command will show the last five commits in the repository's history. You can adjust the number after -n to display a different number of commits if needed.
+ 
+
+Experiment 12.
+ 
+Analyzing and Changing Git History
+ 
+Write the command to undo the changes introduced by the commit with the ID "abc123". Solution:
+To undo the changes introduced by a specific commit with the ID "abc123" in Git, you can use the git revert command. The git revert command creates a new commit that undoes the changes made by the specified commit, effectively "reverting" the commit. Here's the command:
+ 
+$ git revert abc123
+ 
+Replace "abc123" with the actual commit ID that you want to revert. After running this command, Git will create a new commit that negates the changes introduced by the specified commit. This is a safe way to undo changes in Git because it preserves the commit history and creates a new commit to record the reversal of the changes.
