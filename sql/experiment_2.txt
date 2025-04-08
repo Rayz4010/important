@@ -1,0 +1,29 @@
+Experiment 2
+
+create database exp2;
+use exp2;
+
+create table Employee(
+    empno int primary key,
+    ename varchar(255),
+    job varchar(255),
+    mgr int,
+    sal decimal(10,2)
+);
+desc Employee;
+
+alter table Employee add commission decimal(10,2);
+desc Employee;
+
+
+insert into Employee(empno,ename,job,mgr,sal,commission)values
+    (1,'Charlotte','Manager',7839,50000,2000.00),
+    (2,'Jane','Manager',7839,60000,1500.00),
+    (3,'Franzi','Manager',7839,55000,2000.00),
+    (4,'Varley Perze Rodrigez','Manager',7839,70000,1800.00),
+    (5,'Max','Manager',7839,80000,2000.00);
+select* from Employee;
+
+alter table Employee modify job varchar(100);
+rename table Employee to Emp;
+delete from Emp where empno=1;

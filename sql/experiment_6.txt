@@ -1,0 +1,68 @@
+Experiment 6
+
+create database exp_6;
+use exp_6;
+
+
+create table O_RollCall(
+    student_id INT PRIMARY KEY,
+    student_name VARCHAR(255),
+    birth_date  DATE
+);
+desc O_RollCall;
+
+create table N_RollCall(
+    student_id INT PRIMARY KEY,
+    student_name VARCHAR(255),
+    birth_date  DATE
+);
+desc N_RollCall;
+
+insert into O_RollCall(student_id,student_name,birth_date) values 
+    (1,'Charlotte','2000-01-01'),
+    (3,'Franzi','1998-08-02');
+select* from O_RollCall;
+
+insert into N_RollCall(student_id,student_name,birth_date) values 
+    (1,'Charlotte','2000-01-01'),
+    (2,'Jane','1997-12-04'),
+    (3,'Franzi','1998-08-02'),
+    (4,'Varley Perze Rodrigez','1998-07-06'),
+    (5,'Max','2003-04-08');
+select* from N_RollCall;
+
+
+
+DELIMITER //
+CREATE PROCEDURE merge_rollcall_data()
+BEGIN
+  DECLARE done INT DEFAULT FALSE;
+  DECLARE n_id INT;
+  DECLARE n_name VARCHAR(255);
+  DECLARE n_birth_date DATE;
+  DECLARE n_cursor CURSOR FOR
+    SELECT student_id, student_name, birth_date FROM N_RollCall;
+  DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = TRUE;
+  OPEN n_cursor;
+  cursor_loop: LOOP
+    FETCH n_cursor INTO n_id, n_name, n_birth_date;
+    IF done THEN
+      LEAVE cursor_loop;
+    END IF;
+    IF NOT EXISTS (
+      SELECT 1 FROM O_RollCall WHERE student_id = n_id
+    ) THEN
+      INSERT INTO O_RollCall (student_id, student_name, birth_date)
+      VALUES (n_id, n_name, n_birth_date);
+    END IF;
+  END LOOP;
+  CLOSE n_cursor;
+END//
+DELIMITER ;
+
+
+call merge_rollcall_data();
+
+select* from O_RollCall;
+
+    

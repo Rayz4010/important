@@ -1,0 +1,55 @@
+Experiment 5
+
+create database exp5;
+use exp5;
+
+
+
+create table Employee (
+     E_id Int,
+     E_name Varchar(255),
+     Age Int,
+     Salary Decimal(10,2)
+);
+desc Employee;
+
+
+
+insert into Employee(E_id,E_name,Age,Salary)values
+    (1,'Charlotte',23,50000),
+    (2,'Jane',25,60000),
+    (3,'Franzi',22,55000),
+    (4,'Varley Perze Rodrigez',24,70000),
+    (5,'Max',26,80000);
+select* from Employee;
+
+
+
+
+DELIMITER //
+CREATE PROCEDURE fetch_employee_data()
+BEGIN
+  DECLARE emp_id INT;
+  DECLARE emp_name VARCHAR(255);
+  DECLARE emp_age INT;
+  DECLARE emp_salary DECIMAL(10, 2);
+  DECLARE emp_cursor CURSOR FOR SELECT E_id, E_name, Age, Salary FROM Employee;
+  DECLARE CONTINUE HANDLER FOR NOT FOUND SET @finished = 1;
+
+  OPEN emp_cursor;
+  SET @finished = 0;
+  cursor_loop: LOOP
+    FETCH emp_cursor INTO emp_id, emp_name, emp_age, emp_salary;
+    IF @finished = 1 THEN
+      LEAVE cursor_loop;
+    END IF;
+    SELECT CONCAT('Employee ID: ', emp_id, ', Name: ', emp_name, ', Age: ', emp_age, ', Salary: ', emp_salary) AS Employee_Info;
+  END LOOP;
+
+  CLOSE emp_cursor;
+END//
+DELIMITER ;
+
+
+
+CALL fetch_employee_data();

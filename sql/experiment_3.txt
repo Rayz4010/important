@@ -1,0 +1,28 @@
+Experiment 3
+
+create database exp3;
+use exp3;
+
+create table Employee(
+    e_id int primary key,
+    e_name varchar(255),
+    age int,
+    salary decimal(10,2)
+);
+desc Employee;
+
+insert into Employee(e_id,e_name,age,salary)values
+    (1,'Charlotte',23,50000),
+    (2,'Jane',25,60000),
+    (3,'Franzi',22,55000),
+    (4,'Varley Perze Rodrigez',24,70000),
+    (5,'Max',26,80000);
+select* from Employee;
+
+
+select count(e_name) as No_of_Employees from Employee;
+select max(age) as MaxAge from Employee;
+select min(age) as MinAge from Employee;
+select salary as Employee_Salary from Employee order by salary asc;
+select salary,count(*) as Employee_Count from Employee group by salary;
+

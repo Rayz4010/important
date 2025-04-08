@@ -1,0 +1,34 @@
+Experiment 1
+
+create database exp1;
+use exp1;
+
+create table Employee(
+    empno int primary key,
+    ename varchar(255),
+    job varchar(255),
+    manager_no int,
+    sal decimal(10,2),
+    commission decimal(10,2)
+);
+desc Employee;
+
+create user 'aiml'@'localhost' identified by 'aiml';
+
+insert into Employee(empno,ename,job,manager_no,sal,commission)values
+    (1,'Charlotte','Manager',7839,50000,2000.00),
+    (2,'Jane','Manager',7839,60000,1500.00),
+    (3,'Franzi','Manager',7839,55000,2000.00),
+    (4,'Varley Perze Rodrigez','Manager',7839,70000,1800.00),
+    (5,'Max','Manager',7839,80000,2000.00);
+select* from Employee;
+rollback;
+select* from Employee;
+
+
+alter table Employee add primary key(empno);
+alter table Employee modify ename varchar(50) NOT NULL;
+desc Employee;
+
+insert into employee(empno,ename,job,manager_no,sal,commission)values
+    (6,'NULL','Manager',7839,50000,2000.00);
