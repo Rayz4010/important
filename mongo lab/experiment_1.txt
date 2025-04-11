@@ -1,0 +1,67 @@
+Experiment 1
+
+use newDB
+
+
+db.ProgBooks.insertMany([
+    { title: "Clean Code",author: "Robert",category: "SD", year: 2008 },
+    { title: "JavaScript: "Doug",category: "JS", year: 2008 },
+    { title: "Design Patterns",author: "Erich",category: "SD", year: 1994 },
+    { title: "Algorithms",author: "Thomas",category: "Algo", year: 2009 },
+    { title: "Python",author: "Eric",category: "Python", year: 2015 }
+])
+
+
+db.ProgBooks.find({year:2008}).pretty()
+
+
+db.ProgBooks.find({ $and: [
+    { category: "SD" },
+    { year: 2008 }]
+}).pretty()
+
+
+db.ProgBooks.find({
+    $or: [
+        { category: "JavaScript" },
+        { year: 2015 }
+    ]
+}).pretty()
+
+
+db.ProgBooks.insertOne({
+    title: "Pragmatic",
+    author: "David",
+    category: "SD",
+    year: 1999
+})
+
+
+db.ProgBooks.updateOne(
+    { title: "Clean Code: A Handbook of Agile Software Craftsmanship" },
+    { $set: { author: "Robert C. Martin (Uncle Bob)" } }
+)
+
+
+ db.ProgBooks.updateMany(
+    { year: { $lt: 2010 } },
+    { $set: { category: "Classic Programming Books" } }
+)
+
+
+db.ProgBooks.find().pretty()
+
+
+db.ProgBooks.deleteOne({ title: "JavaScript" })
+
+
+db.ProgBooks.deleteMany({ year: { $lt: 1995 } })
+
+
+db.ProgBooks.deleteMany({})
+
+
+db.ProgBooks.find({}, { title: 1, author: 1 } )
+
+
+db.ProgBooks.find({}, {year: 0})
