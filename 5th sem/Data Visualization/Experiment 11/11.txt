@@ -1,0 +1,75 @@
+Here’s the short and simple version:
+
+---
+
+### **i) Create KPIs**
+
+Create calculated fields:
+
+* **Employee Count:** `COUNT([Employee ID])`
+* **Attrition Count:** `IF [Attrition] = "Yes" THEN 1 ELSE 0 END`
+* **Attrition Rate:** `SUM([Attrition Count]) / COUNT([Employee ID])`
+* **Active Employees:** `COUNT([Employee ID]) - SUM([Attrition Count])`
+* **Average Age:** `AVG([Age])`
+
+---
+
+### **ii) Lollipop Chart (Attrition Rate by Gender)**
+
+* Gender → Columns
+* Attrition Rate → Rows
+* Duplicate Attrition Rate
+* First Marks: Bar (thin)
+* Second Marks: Circle (large)
+* Sync axes and show circle labels only.
+
+---
+
+### **iii) Pie Chart (Attrition by Department)**
+
+* Department → Color
+* Attrition Count → Angle + Label
+* Marks → Pie
+* Label → Percent of Total
+
+---
+
+### **iv) Bar Chart (Employees by Age Group)**
+
+Create Age Group field, then:
+
+* Age Group → Columns
+* Employee ID → Rows → Convert to Count
+* Sort descending
+* Add labels
+
+---
+
+### **v) Highlight Table (Job Satisfaction by Job Role)**
+
+* Job Role → Rows
+* Job Satisfaction → Columns
+* Employee Count → Color + Label
+* Marks → Bar
+
+---
+
+### **vi) Horizontal Bar Chart (Attrition by Education Field)**
+
+* Education Field → Rows
+* Attrition Count → Columns
+* Sort and add labels
+
+---
+
+### **vii) Donut Charts (Attrition Rate by Gender & Age Group)**
+
+* Age Group → Columns
+* Gender → Color
+* Attrition Rate → Angle
+* Marks → Pie
+* Duplicate measure to make donut shape.
+
+---
+
+Done.
