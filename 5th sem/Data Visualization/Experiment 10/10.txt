@@ -1,0 +1,68 @@
+Here’s the short and simple version:
+
+---
+
+### **Step 2: Symbol Map**
+
+* Drag Latitude → Rows, Longitude → Columns
+* Drag Country → Detail
+* Drag GDP_Billion_USD → Size
+* Filter Year → 2026
+* Change Marks → Circle and add Label + Tooltip
+* Rename: **Symbol Map**
+
+---
+
+### **Step 3: Bar Chart (Belgium)**
+
+* New Sheet → Name: **Belgium GDP**
+* Filter Country → Belgium
+* Year → Columns, GDP_Billion_USD → Rows
+* Marks → Bar
+
+---
+
+### **Step 4: Pie Chart (2010 Countries)**
+
+* New Sheet → Name: **GDP Pie 2010**
+* Filter: Country (India, Nepal, Romania, South Asia, Singapore), Year → 2010
+* Country → Color
+* GDP_Billion_USD → Angle + Label
+* Marks → Pie
+
+---
+
+### **Step 5: Line Chart (Bhutan vs Costa Rica)**
+
+* New Sheet → Name: **Bhutan vs Costa Rica**
+* Filter Country → Bhutan, Costa Rica
+* Year → Columns, GDP_Billion_USD → Rows
+* Marks → Line, Country → Color
+
+---
+
+### **Step 6: Scatter Plot**
+
+* New Sheet → Name: **Scatter GDP**
+* Filter Country → Mexico, Algeria, Fiji, Estonia
+* Filter Year → 2004–2006
+* Year → Columns, GDP_Billion_USD → Rows
+* Marks → Circle, Country → Color + Label
+
+---
+
+### **Step 7: Dashboard**
+
+* Create Dashboard and add all sheets
+* Adjust layout
+* Show filters (Year, Country, Region)
+* Enable "Use as Filter"
+
+---
+
+### **Step 8: Save/Export**
+
+* Save as **.twbx**
+* Optional: Export as PDF
+
+---
