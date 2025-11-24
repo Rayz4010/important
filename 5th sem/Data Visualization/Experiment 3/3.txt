@@ -1,0 +1,45 @@
+Here’s the simplified version:
+
+---
+
+**Quick Guide**
+
+**1. Data Preview**
+
+* After loading the file, Tableau shows a preview. Rename fields if needed.
+* Click **Sheet 1** to start working.
+
+**2. Key Terms**
+
+* **Dimensions**: Text categories (Platform, Genre, Publisher).
+* **Measures**: Numeric values (Global_Sales, NA_Sales, Year).
+* **Rows/Columns Shelf**: Place fields to create the layout of a chart.
+* **Marks**: Controls chart style, color, labels, and size.
+* **Filters**: Limits the data shown.
+* **Pages**: Used to animate or step through data over time.
+
+**3. Basic Features**
+
+* **Bar Chart (Global Sales by Genre)**
+  Genre → Columns
+  Global_Sales → Rows
+  Ensure Global_Sales is set to **SUM**.
+
+* **Sorting**
+  Click the axis and sort descending.
+
+* **Filtering**
+  Year → Filters → choose range.
+  Add Year to **Pages** for time-based animation.
+
+**4. Dashboard and Extra Chart**
+
+* Create another sheet: **Global Sales Trend by Year**
+  Year → Columns
+  Global_Sales → Rows
+  Change to **Line Chart**
+  Drag Genre to Color.
+
+* Go to **Dashboard**, add your charts, and set size to **Automatic**.
+
+---

@@ -1,0 +1,6 @@
+to create the join
+-->drag first feature to canvas
+-->hover ove the feature and then click on the small + icon
+--?new canvas will appear 
+-->add the new feature to the new canvas
+noww change your join

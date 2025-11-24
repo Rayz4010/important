@@ -1,0 +1,55 @@
+Here’s the short and easy version:
+
+---
+
+### **Stage 1: Load Data**
+
+* Save the file as **India_State_Health_Expenditure_2016-17.csv**.
+* Open Tableau → **Connect → Text File** → select the CSV.
+
+---
+
+### **Stage 2: Create Worksheets**
+
+**1. Map View**
+
+* Drag **State** → set Geographic Role to *State/Province*.
+* Drag **PerCapita_₹** → Color.
+* This creates a color-coded India map.
+
+**2. Bar Chart (OOPE vs GHE)**
+
+* State → Rows
+* OOPE_pct → Columns
+* Add **GHE_pct** → create dual-axis or side-by-side bars.
+
+**3. CHE Comparison**
+
+* State → Rows
+* CHE_Cr → Columns
+* Sort descending.
+
+---
+
+### **Stage 3: Build Dashboard**
+
+* Create Dashboard
+* Add **Horizontal Container** → place Map and Bar Chart side-by-side.
+* Add **Vertical Container** below → insert CHE chart + a short text note.
+
+---
+
+### **Stage 4: Add Interactivity**
+
+* Dashboard → **Actions → Filter**.
+* Use Map as the source and other charts as the targets.
+
+---
+
+### **Story Creation**
+
+* Click **New Story** tab.
+* Drag dashboards/worksheets into each story point.
+* Add short captions (example: *State-wise spending overview*).
+
+---

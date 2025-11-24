@@ -1,0 +1,44 @@
+Here’s a cleaner, shorter version:
+
+---
+
+**How to Create the Tableau Workbook (.twbx)**
+
+1. **Open Tableau**
+
+   * Start Tableau Desktop or Tableau Public.
+   * From the left panel, select **Sample – Superstore**.
+
+2. **Create Three Sheets**
+
+   * **Sheet 1: Sales by Region**
+
+     * Region → Columns
+     * Sales → Rows
+     * Category → Color
+     * Rename: *Sales by Region*
+   * **Sheet 2: Sales Trend**
+
+     * Order Date → Columns (use Month)
+     * Sales → Rows
+     * Rename: *Sales Trend*
+   * **Sheet 3: Sales Pie**
+
+     * Category → Color
+     * Sales → Angle
+     * Change chart type to Pie
+     * Add Category → Label
+     * Rename: *Sales Pie*
+
+3. **Build the Dashboard**
+
+   * Click **New Dashboard**
+   * Add all three sheets
+   * Adjust layout and add filters if needed
+
+4. **Save as .twbx**
+
+   * File → Save As →
+     **Experiment_1_Tableau_Superstore.twbx**
+
+---
