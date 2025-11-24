@@ -1,0 +1,75 @@
+Here’s the **short and simple** version of everything:
+
+---
+
+### **1) Import Data**
+
+* Open Power BI → **Get Data**
+* Load the **Sales dataset**
+
+---
+
+### **2) Choropleth (Filled) Map**
+
+* Add **Filled Map**
+* State → **Location**
+* Revenue → **Values**
+* Higher revenue shows darker color
+
+---
+
+### **3) Line Chart (Revenue by Month)**
+
+* Add **Line Chart**
+* Month → **Axis**
+* Revenue → **Values**
+* Sort months in order
+
+---
+
+### **4) Age Bin (Size = 10)**
+
+* Modeling → **New Group**
+* Field: **Age** → Bin Size: **10**
+* Use a bar/column chart to show Revenue by Age Bin
+
+---
+
+### **5) Donut Chart (Revenue % by Region)**
+
+* Add **Donut Chart**
+* Region → Legend
+* Revenue → Values
+* Show **percentage labels**
+
+(Zero axis measure created if required.)
+
+---
+
+### **6) Butterfly Chart (Male vs Female Revenue)**
+
+* Create one bar chart for **Male**
+* Duplicate and change filter to **Female**
+* Reverse one chart’s axis
+* Place both visuals side-by-side (mirror format)
+
+---
+
+### **7) Calculated Fields (Profitability)**
+
+* Create:
+  `AvgRevenuePerState = AVERAGE(Sales[Revenue])`
+* Create:
+  `Profitability = IF(SUM(Sales[Revenue]) > AvgRevenuePerState,"Profitable","Not Profitable")`
+* Display using a map or table
+
+---
+
+### **8) Build the Dashboard**
+
+* Arrange visuals neatly
+* Add slicers (Month, Gender, Region, Category)
+
+---
+
+Done.

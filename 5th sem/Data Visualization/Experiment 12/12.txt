@@ -1,0 +1,60 @@
+Here’s the *stupid simple* version:
+
+---
+
+### **1) Donut Chart**
+
+* Pick **Donut Chart**
+* Drag **Type → Legend**
+* Drag **Title → Values → Count**
+* Filter → Keep only **Movie + TV Show**
+* Turn on **Labels → % of total**
+* Pick nice colors
+
+---
+
+### **2) Area Chart (By Year & Type)**
+
+* Pick **Area Chart**
+* Release Year → **X-axis**
+* Title → **Values → Count**
+* Type → **Legend**
+* Sort by year, clean colors, add axis titles
+
+---
+
+### **3) Top 10 Genres (Horizontal Bar Chart)**
+
+* Pick **Horizontal Bar Chart**
+* Genre → **Y-axis**
+* Title → **X-axis → Count**
+* Filter → **Top 10 by Count**
+* Turn on labels and sort high → low
+
+---
+
+### **4) Map (Shows by Country)**
+
+* Pick **Map**
+* Country → **Location**
+* Title → **Size → Count**
+* Make sure Country field is set as **geographic data**
+
+---
+
+### **5) Description Table**
+
+* Pick **Table**
+* Add **Title + Description**
+* Add a **Slicer** (Title) to search and show details
+
+---
+
+### **6) Build Dashboard**
+
+* Add all visuals to one page
+* Turn on filters and interactions
+
+---
+
+Done.

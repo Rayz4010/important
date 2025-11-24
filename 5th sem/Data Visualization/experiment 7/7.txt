@@ -1,0 +1,59 @@
+Here’s a simple short version based on the PDF steps:
+
+---
+
+### **Power BI Report – Quick Steps**
+
+1. **Open Power BI**
+2. Click **Get Data → Excel/Text → Load File**
+   (shown on page 1). 
+
+---
+
+### **Clean and Prepare Data**
+
+3. Power Query opens → Click **Use First Row as Header**. 
+4. Create any needed calculated column (example: attrition count).
+5. Click **Close & Apply**. 
+
+---
+
+### **Create Visuals**
+
+6. Start with a **KPI chart** (employee number). 
+7. Add more visuals:
+
+   * Pie Chart
+   * Stacked Column Chart
+   * Matrix
+   * Donut Chart
+   * Bar Chart
+     (all shown through pages 5–9). 
+
+---
+
+### **Format Charts**
+
+8. Use **Format Pane** to edit title, color, font, alignment (examples shown on pages 5–7). 
+
+---
+
+### **Sorting**
+
+9. If sorting doesn't look right, create a sort column and sort visuals by it. 
+
+---
+
+### **Add Filters (Slicers)**
+
+10. Add a **Slicer** to filter by category, age, or other fields. 
+
+---
+
+### **Final Dashboard**
+
+11. Arrange visuals neatly to complete the report.
+
+---
+
+Done.

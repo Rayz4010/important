@@ -1,0 +1,57 @@
+Here’s the short and simple version:
+
+---
+
+### **Power BI Filters — Quick Summary**
+
+Filters help you show only the data you need.
+
+There are **4 main filter types**:
+
+1. **Visual Filter** → Affects only one chart.
+2. **Page Filter** → Affects every visual on the current page.
+3. **Report Filter** → Affects all pages in the report.
+4. **Drill-through Filter** → Lets you right-click a value and open a detailed page for that item.
+
+
+
+---
+
+### **Applying Filters (Example with HR Dataset)**
+
+#### **1) Department Filter**
+
+* Drag **Department** → Filters pane
+* Choose **Basic Filtering**
+* Select only the values you want (Example: HR only).
+  Now visuals show only HR results.
+
+
+---
+
+#### **2) Advanced Filter**
+
+Goal: Show employees earning **≥ 10000**.
+
+* Drag **Monthly Income** → Filters pane
+* Change filter type → **Advanced filtering**
+* Condition → **Greater than or equal to**
+* Value → `10000`
+
+
+---
+
+#### **3) Top N Filter**
+
+Goal: Show **Top 4 job roles with highest job satisfaction**.
+
+* Select the visual
+* In Filters pane → Job Role → choose **Top N**
+* Enter **4**
+* Choose value: **Sum of Job Satisfaction**
+* Apply
+
+
+---
+
+Done.
