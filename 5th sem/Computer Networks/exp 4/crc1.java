@@ -30,3 +30,8 @@ public class crc1 {
         System.out.println(Arrays.stream(recv).anyMatch(x -> x == 1) ? "Error detected" : "Valid");
     }
 }
+
+//output
+//1101011011
+//1101
+//the above is the inputs for this program
