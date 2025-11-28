@@ -40,3 +40,10 @@ class Ford {
         bellman(n, s.nextInt(), g);
     }
 }
+
+
+//matrix
+//0450
+//0007
+//0700
+//00-150
