@@ -1,6 +1,6 @@
 import java.util.*;
 
-class LB {
+class LBuck {
     public static void main(String[] args) {
         int[] pk = new int[20];
         int rem = 0, cap = 4, rate = 3, sent, acc;
