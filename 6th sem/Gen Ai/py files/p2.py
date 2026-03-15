@@ -1,7 +1,8 @@
 import matplotlib.pyplot as plt, seaborn as sns, spacy, numpy as np
 from sklearn.decomposition import PCA
 
-#!python -m spacy download en_core_web_md
+'''!python -m spacy download en_core_web_md'''
+
 nlp = spacy.load("en_core_web_md")
 words = ["computer","internet","software","hardware","network","AI","cloud","cybersecurity","database","robotics"]
 
